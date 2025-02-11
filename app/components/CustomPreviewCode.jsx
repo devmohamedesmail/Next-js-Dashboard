@@ -20,8 +20,8 @@ export default function CustomPreviewCode({ preview, htmlcode, jsxcode,title }) 
                 className="tab"
                 aria-label="HTML"
                 defaultChecked />
-            <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <SyntaxHighlighter language="jsx" style={oneDark}>
+            <div role="tabpanel" className="tab-content bg-base-100 border-base-300  rounded-box p-6">
+                <SyntaxHighlighter language="jsx"  style={oneDark}>
                     {htmlcode}
                 </SyntaxHighlighter>
             </div>

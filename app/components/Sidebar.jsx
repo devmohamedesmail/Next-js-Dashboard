@@ -10,6 +10,12 @@ import CustomSidebarMenu from './CustomSidebarMenu';
 import { FaUserFriends } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
 import { FaWpforms } from "react-icons/fa";
+import { CgComponents } from "react-icons/cg";
+
+
+
+
+
 
 export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
     const { themeOptions, setthemeOptions } = useContext(ThemeContext)
@@ -21,6 +27,12 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
         { label: "Radio Elements", href: "/pages/dashboard/forms/radio" },
         { label: "Checkbox Elements", href: "/pages/dashboard/forms/checkbox" },
         
+    ]
+
+
+    const componentsLinks = [
+        { label: "Buttons", href: "/pages/dashboard/components/button" },
+        { label: "Dropdown Menu", href: "/pages/dashboard/components/dropdown" },
     ]
 
     return (
@@ -42,6 +54,7 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
                         <CustomSidebarItem link='/pages/dashboard' icon={<RiDashboard3Line size={20} />} title='Dashboard' />
                        
                         <CustomSidebarMenu title="Forms Components" items={formsLinks} icon={<FaWpforms size={20} />} />
+                        <CustomSidebarMenu title="Components" items={componentsLinks} icon={<CgComponents size={20} />} />
                       
 
 
