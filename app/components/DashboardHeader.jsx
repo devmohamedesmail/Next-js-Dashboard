@@ -1,8 +1,22 @@
-import React from 'react'
+'use client'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../context/ThemeProvider'
+import { CiMenuFries } from "react-icons/ci";
 
-export default function DashboardHeader() {
+export default function DashboardHeader({ isSidebarOpen, setSidebarOpen }) {
+    const { themeOptions, setthemeOptions } = useContext(ThemeContext)
     return (
-        <div className='bg-gray-100 py-4 shadow-lg border-b-2 border-b-gray-100'>
+        <div
+            style={{ backgroundColor: themeOptions.header }}
+            className={` py-2 shadow-lg  flex justify-between items-center sticky top-0 z-50`}>
+            
+            
+            <div>
+                <button className='ml-3' onClick={()=>setSidebarOpen(prev => !prev)}><CiMenuFries color='white' size={20} /></button>
+            </div>
+
+
+
             <div className="flex flex-1 justify-end px-2">
                 <div className="flex items-stretch">
 
@@ -17,8 +31,8 @@ export default function DashboardHeader() {
                         <ul
                             tabIndex={0}
                             className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
+                            <li><a>Profile</a></li>
+                            <li><a>Logout </a></li>
                         </ul>
                     </div>
                 </div>

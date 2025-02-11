@@ -8,11 +8,12 @@ import { Line } from 'react-chartjs-2';
 import {
   Chart as
     ChartJS,
-  
+
   ArcElement,
   Tooltip,
   Legend
 } from 'chart.js';
+import CustomPageTitle from '@/app/components/CustomPageTitle';
 
 // Register required components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -47,15 +48,36 @@ export default function page() {
     ],
   };
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3'>
-      <div>
-        <Doughnut data={data} />
-      </div>
-      <div>
-        <Pie data={data} />
-      </div>
-      
+    <div>
+      <CustomPageTitle title="Dashboard" />
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+        <div className='bg-gray-100 p-3'>
+          <Doughnut data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Pie data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Doughnut data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Pie data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Doughnut data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Pie data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Doughnut data={data} />
+        </div>
+        <div className='bg-gray-100 p-3'>
+          <Pie data={data} />
+        </div>
 
+
+      </div>
     </div>
   )
 }
