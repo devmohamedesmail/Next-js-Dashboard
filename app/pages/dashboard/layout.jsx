@@ -17,7 +17,7 @@ export default function DashboardLayout({ children }) {
       <div className='flex-1 '>
         <DashboardHeader isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
         {/* Main Content */}
-        <main className="flex-1 h-screen px-3  relative mt-3">{children}
+        <main className="flex-1  px-3  relative mt-3 pb-28">{children}
 
           <SettingSection />
         </main>
