@@ -19,6 +19,7 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
         { label: "Input Elements", href: "/pages/dashboard/forms/inputs" },
         { label: "Select Elements", href: "/pages/dashboard/forms/select" },
         { label: "Radio Elements", href: "/pages/dashboard/forms/radio" },
+        { label: "Checkbox Elements", href: "/pages/dashboard/forms/checkbox" },
         
     ]
 
