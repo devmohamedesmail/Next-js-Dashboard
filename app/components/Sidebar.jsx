@@ -33,6 +33,7 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
     const componentsLinks = [
         { label: "Buttons", href: "/pages/dashboard/components/button" },
         { label: "Dropdown Menu", href: "/pages/dashboard/components/dropdown" },
+        { label: "Modal", href: "/pages/dashboard/components/modal" },
     ]
 
     return (
