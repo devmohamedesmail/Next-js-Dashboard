@@ -11,6 +11,7 @@ import { FaUserFriends } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
 import { FaWpforms } from "react-icons/fa";
 import { CgComponents } from "react-icons/cg";
+import { SiAuthentik } from "react-icons/si";
 
 
 
@@ -34,6 +35,14 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
         { label: "Buttons", href: "/pages/dashboard/components/button" },
         { label: "Dropdown Menu", href: "/pages/dashboard/components/dropdown" },
         { label: "Modal", href: "/pages/dashboard/components/modal" },
+        { label: "Steps", href: "/pages/dashboard/components/steps" },
+    ]
+
+
+    const authLinks = [
+        { label: "Login", href: "/pages/auth/login" },
+        { label: "Resgiter", href: "/pages/auth/register" },
+      
     ]
 
     return (
@@ -56,6 +65,8 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
                        
                         <CustomSidebarMenu title="Forms Components" items={formsLinks} icon={<FaWpforms size={20} />} />
                         <CustomSidebarMenu title="Components" items={componentsLinks} icon={<CgComponents size={20} />} />
+
+                        <CustomSidebarMenu title="Auth" items={authLinks} icon={<SiAuthentik size={20} />} />
                       
 
 
