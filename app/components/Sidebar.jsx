@@ -13,7 +13,7 @@ import { FaWpforms } from "react-icons/fa";
 import { CgComponents } from "react-icons/cg";
 import { SiAuthentik } from "react-icons/si";
 
-
+import { CiViewTable } from "react-icons/ci";
 
 
 
@@ -68,7 +68,7 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
 
                         <CustomSidebarMenu title="Auth" items={authLinks} icon={<SiAuthentik size={20} />} />
                       
-
+                        <CustomSidebarItem link='/pages/dashboard/tables' icon={<CiViewTable size={20} />} title='Tables' />
 
                     </div>
                 </div>
