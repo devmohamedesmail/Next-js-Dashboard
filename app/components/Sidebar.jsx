@@ -15,7 +15,7 @@ import { SiAuthentik } from "react-icons/si";
 
 import { CiViewTable } from "react-icons/ci";
 
-
+import { RiFeedbackLine } from "react-icons/ri";
 
 
 export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
@@ -44,6 +44,11 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
         { label: "Resgiter", href: "/pages/auth/register" },
       
     ]
+    const FeedbackLinks = [
+        { label: "Alert", href: "/pages/dashboard/feedback" },
+       
+      
+    ]
 
     return (
         <div>
@@ -69,7 +74,8 @@ export default function Sidebar({ isSidebarOpen, setSidebarOpen }) {
                         <CustomSidebarMenu title="Auth" items={authLinks} icon={<SiAuthentik size={20} />} />
                       
                         <CustomSidebarItem link='/pages/dashboard/tables' icon={<CiViewTable size={20} />} title='Tables' />
-
+                        
+                        <CustomSidebarMenu title="Feedback" items={FeedbackLinks} icon={<RiFeedbackLine size={20} />} />
                     </div>
                 </div>
             </aside>
